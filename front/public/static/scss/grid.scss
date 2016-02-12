@@ -1,0 +1,26 @@
+.grid {
+	color:#424242;
+	margin:30px 10px;
+	border:1px solid #CCCCCC;
+
+	ul { padding: 0; margin:0;}
+
+	.data, .header {
+		border-bottom:1px solid #CCCCCC;
+
+		&.header > span { font-weight: bold;}
+
+		> span,
+		.item > span {
+			display: inline-block;
+			list-style: none;
+			width:calc(50% - 21px);
+			padding: 10px;
+			border-right:1px solid #CCCCCC;
+
+			& > span:last-child {
+				border-right: none;
+			}
+		}
+	}
+}

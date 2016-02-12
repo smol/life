@@ -1,16 +1,19 @@
 {
-  "name": "life",
+  "name": "Contagion",
+  "homepage": "https://github.com/smol/contagion",
   "authors": [
-    "Smol"
+    "Julien Smolareck <julien.smolareck@gmail.com>"
   ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
+  "description": "A side-project",
   "license": "LGPL",
-  "homepage": "public/index.html",
   "dependencies": {
-    "socket.io": "^1.4.5",
-    "socket.io-client": "^1.4.5",
-    "angular": "^1.5.0"
+    "angular": "~1.4.8",
+    "socket.io-client": "~1.4.1",
+    "angular-socket-io": "~0.7.0",
+    "three.js": "threejs#*",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-cookies": "~1.4.9"
   }
 }

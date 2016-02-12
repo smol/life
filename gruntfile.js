@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		dirs : {
 			modules : 'front/bower_components',
 			src : 'front/public',
-			build : 'build'
+			build : 'front/build'
 		},
 		copy : {
 			html : {
@@ -45,6 +45,13 @@ module.exports = function(grunt) {
 				dest : '<%= dirs.build %>/static/font/',
 				flatten : false
 			}
+			// main : {
+			// 	expand : true,
+			// 	cwd : '<%= dirs.src %>/static/javascripts/library/',
+			// 	src : '*.js',
+			// 	dest : 'public/build/library',
+			// 	flatten : true
+			// }
 		},
 
 		concat: {
@@ -61,14 +68,18 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				src: ['<%= dirs.src %>/**/*.js'],
-				dest: '<%= dirs.build %>/life.js',
+				dest: '<%= dirs.build %>/contagion.min.js',
+			},
+			css : {
+				src : ['<%= dirs.src %>/static/**/*.scss'],
+				dest : '<%= dirs.build %>/style.scss'
 			}
 		},
 
 		uglify: {
 			build: {
-				src: 'public/build/life.js',
-				dest: 'public/build/life.min.js'
+				src: 'public/build/production.js',
+				dest: 'public/build/production.min.js'
 			}
 		},
 
@@ -78,7 +89,7 @@ module.exports = function(grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'<%= dirs.build %>/style.css': '<%= dirs.build %>/*.scss'
+					'<%= dirs.build %>/style.css': '<%= dirs.build %>/style.scss'
 				}
 			}
 		},

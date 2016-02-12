@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="life">
 	<head>
+		<base href="/index.html">
 		<meta charset="utf-8">
 		<title>Life</title>
-		<script type="text/javascript" src="lib.min.js"></script>
-		<script type="text/javascript" src="life.js"></script>
+
+		<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+
+		<script src="lib.min.js"></script>
+		<script src="contagion.min.js"></script>
 	</head>
 	<body>
-		<canvas id="canvas" width="800" height="700"></canvas>
+		<div data-ui-view=""></div>
 	</body>
 </html>

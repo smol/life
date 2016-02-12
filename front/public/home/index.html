@@ -1,0 +1,27 @@
+<section id="home">
+	<!-- <map-renderer model="viruses" states="map_states"></map-renderer> -->
+
+	<wizard display="createarmy_popup" end-callback="post">
+		<form>
+			<section class="choose_army">
+				<h2>Choissisez votre faction</h2>
+				<div class="wrapper">
+					<div class="button zombie" data-ng-click="new_army.type = 'zombie'" data-ng-class="{'active' : new_army.type == 'zombie'}">
+						<icon id-svg="'zombie'" style="fill:#DCDCDC;"></icon>
+						<span>Zombies</span>
+					</div>
+					<div class="button survivor" data-ng-click="new_army.type = 'survivor'" data-ng-class="{'active' : new_army.type == 'survivor'}">
+						<icon id-svg="'survivor'" style="fill:#DCDCDC;"></icon>
+						<span>Survivants</span>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Nommez votre armée</h2>
+				<label for="name">Nom de l'armée :</label>
+				<input type="text" id="name" data-ng-model="new_army.name">
+			</section>
+		</form>
+
+	</wizard>
+</section>
